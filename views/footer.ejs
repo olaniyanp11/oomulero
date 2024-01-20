@@ -1,0 +1,63 @@
+ <footer>
+<div class="footerLogo">
+<div class="img">
+    <img src="/images/logo.png" width="100px" alt="">
+</div>
+    <h2> Opomulero capitals</h2>
+</div>
+<hr>
+   <div class="nav">
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <form class="email">
+              <input type="text">
+              <button type="submit">Subscribe</button>
+            </form>
+          </div>
+          <hr>
+        <p>&copy; <span class="year"> 2024</span> permactech. All rights reserved.</p>
+</footer>
+ </body>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const menuToggle = document.querySelector(".menu-toggle");
+        const navList = document.querySelector("nav ul");
+
+        menuToggle.addEventListener("click", function () {
+          const existingLink = navList.querySelector(".login-link");
+          if( !existingLink){
+            const newList = document.createElement("li")
+            const newLink = document.createElement("a")
+           newLink.innerText = "Login now"
+          newLink.href = "#"
+          newList.appendChild(newLink)
+          navList.appendChild(newList)
+          newLink.classList.add("login-link")
+            navList.classList.toggle("active");
+          menuToggle.classList.toggle("active")
+     }
+          else{
+            navList.classList.toggle("active");
+          menuToggle.classList.toggle("active")
+
+          }
+        });
+      });
+    </script>
+</html>

@@ -1,0 +1,404 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+:root {
+  --main-blue: #213559;
+}
+@mixin flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@mixin heading1 {
+  font-size: 70px;
+}
+@mixin heading2 {
+  font-size: 32px;
+}
+@mixin heading3 {
+  font-size: 22px;
+}
+@mixin text {
+  font-size: 14px;
+}
+@mixin btnprimary {
+  background-color: #213559;
+  border: none;
+  padding: 15px 20px;
+  color: white;
+  width: 150px;
+  border-radius: 7px;
+  font-size: 18px;
+}
+* {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 700;
+}
+nav {
+  @include flex();
+  justify-content: space-between;
+  padding-inline: 50px;
+  position: relative;
+
+  .menu-toggle {
+    font-size: 24px;
+    cursor: pointer;
+    display: none; /* Initially hide on larger screens */
+  }
+
+  ul {
+    @include flex();
+    list-style-type: none;
+    gap: 20px;
+    width: 30%;
+    a {
+      text-decoration: none;
+      color: #213559;
+      width: 50px;
+      transition: color 0.5s;
+    }
+    a:after {
+      width: 100%;
+      height: 2px;
+    }
+    a:hover {
+      color: #5c5f64;
+    }
+  }
+  .btn {
+    text-decoration: none;
+    @include btnprimary();
+    width: 100px;
+    padding: 5px 10px;
+    @include flex();
+    background-color: white;
+    border: 1px solid #213559;
+    color: #213559;
+  }
+}
+.logo {
+  width: 100px;
+  img {
+    width: 100%;
+  }
+}
+
+.page1 {
+  width: 100%;
+  padding-top: 2vh;
+  padding-bottom: 10vh;
+  overflow: hidden;
+  .content {
+    @include flex();
+    gap: 50px;
+    .left {
+      width: 40%;
+      h1 {
+        @include heading1();
+        color: #213559;
+        line-height: 1;
+        font-weight: 800;
+      }
+      article {
+        @include text();
+        color: #131e33;
+        margin-block: 20px;
+      }
+      .btn {
+        @include btnprimary();
+        text-decoration: none;
+        transition: background-color 0.5s ease-in-out, color 0.5s ease-in-out,
+          border;
+        border: 1px solid #213559;
+        box-shadow: 0px 8px 8px 0px #94949463;
+      }
+      button:hover {
+        background-color: white;
+        color: #213559;
+        border: 1px solid #213559;
+      }
+    }
+    .right {
+      img {
+        width: 400px;
+      }
+    }
+  }
+}
+.page2 {
+  @include flex();
+  width: 100%;
+  padding-block: 15vh;
+  background-color: rgba(193, 193, 193, 0.166);
+  gap: 40px;
+  .left {
+    width: 40%;
+    h3 {
+      @include heading3();
+      color: #213559;
+      line-height: 2;
+    }
+    article {
+      @include text();
+      color: gray;
+      letter-spacing: 1px;
+    }
+  }
+  .right {
+    img {
+      width: 480px;
+    }
+  }
+}
+.page3 {
+  width: 100%;
+  padding-top: 15vh;
+  background-color: #213559;
+  gap: 40px;
+  background-image: url("/images/eee.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  color: white;
+  .sub {
+    @include flex();
+    justify-content: flex-start;
+    gap: 20px;
+    margin-block: 10px;
+  }
+  .inner {
+    @include flex();
+    padding-inline: 50px;
+  }
+  h4 {
+    display: inline;
+  }
+  h2 {
+    @include heading2();
+    display: flex;
+    justify-content: center;
+  }
+  div {
+    top: 0;
+    .arr {
+      position: absolute;
+    }
+  }
+  .left {
+    h2 {
+      @include flex();
+      justify-content: left;
+      flex-direction: row;
+      text-align: left;
+      @include text();
+      font-size: 18px;
+      font-weight: 300px;
+      gap: 10px;
+      .sub {
+        @include text();
+      }
+    }
+    .num {
+      width: 50px;
+      height: 50px;
+      border-radius: 50px;
+      border: 5px solid white;
+      @include flex();
+    }
+  }
+  .right {
+    img {
+      width: 500px;
+    }
+  }
+}
+html {
+  scroll-behavior: smooth;
+  scrollbar-width: 30px;
+  scrollbar-track-color: #213559;
+}
+
+.page4 {
+  @include flex();
+  width: 100%;
+  padding-top: 15vh;
+  gap: 40px;
+  overflow: hidden;
+  color: #213559;
+  padding-inline: 50px;
+  padding-bottom: 10vh;
+  .right {
+    img {
+      width: 500px;
+    }
+  }
+  .left {
+    width: 40%;
+    .sub {
+      h3 {
+        @include heading3();
+        color: #213559;
+        line-height: 2;
+      }
+      article {
+        width: 100%;
+        @include text();
+        color: gray;
+        width: 100%;
+        letter-spacing: 1px;
+      }
+    }
+    .sub2 {
+      width: 100%;
+      padding: 20px;
+      background-color: #213559;
+      border-radius: 15px;
+      margin-top: 30px;
+      h3 {
+        @include heading3();
+        color: #fff;
+        line-height: 2;
+      }
+      article {
+        width: 100%;
+        @include text();
+        color: rgb(222, 222, 222);
+        width: 100%;
+        letter-spacing: 1px;
+      }
+    }
+  }
+}
+footer {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  width: 100%;
+  align-items: flex-start;
+  background-color: #213559;
+  color: white;
+  .footerLogo {
+    @include flex();
+    flex-direction: column;
+    .img {
+      @include flex();
+      width: 80px;
+      height: 80px;
+      border-radius: 50px;
+      background-color: white;
+    }
+    text-align: center;
+  }
+  hr {
+    margin-top: 30px;
+    display: block;
+    background-color: #fff;
+  }
+  .nav {
+    @include flex();
+    justify-content: space-between;
+    padding-inline: 70px;
+    ul {
+      margin-top: 20px;
+      list-style-type: none;
+      li {
+        margin-bottom: 10px;
+        a {
+          color: #fff;
+          @include text();
+          text-decoration: none;
+        }
+      }
+    }
+  }
+  p {
+    margin-top: 30px;
+    text-align: center;
+  }
+}
+.email {
+  width: 300px;
+  padding: 5px;
+  border-radius: 15px;
+  background-color: #fff;
+  @include flex();
+  button {
+    background-color: #213559;
+    color: #fff;
+    padding: 15px;
+    width: 150px;
+    border-radius: 15px;
+    border: none;
+  }
+  input {
+    padding: 15px;
+    color: #213559;
+    outline: none;
+    background-color: transparent;
+    border: none;
+  }
+}
+//  nav bar
+
+nav {
+  .menu-toggle {
+    font-size: 24px;
+    cursor: pointer;
+    display: none;
+  }
+}
+@media screen and (max-width: 768px) {
+  nav {
+    .menu-toggle {
+  cursor: pointer;
+  width: 30px;
+  height: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.bar {
+  width: 30px;
+  height: 4px;
+  background-color: #3a5c9c; /* Adjust the color as needed */
+  transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
+}
+
+.menu-toggle.active .bar:nth-child(1) {
+  transform: rotate(-45deg) translate(-5px, 5px);
+}
+
+.menu-toggle.active .bar:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-toggle.active .bar:nth-child(3) {
+  transform: rotate(45deg) translate(-5px, -7px);
+}
+    ul {
+      opacity: 0;
+      visibility: hidden;
+      padding-block: 40px;
+      flex-direction: column;
+      align-items: center;
+      position: absolute;
+      top: -200px;
+      left: 0;
+      width: 100%;
+      background-color: white;
+      transition: 0.5s ease-in-out;
+      box-shadow: -9px 9px 5px rgba(0, 0, 0, 0.1);
+    }
+    .btn {
+      display: none;
+    }
+    ul.active {
+      opacity: 1;
+      visibility: visible;
+      top: 80px;
+      // display: flex; /* Show when active (hamburger button is clicked) */
+    }
+  }
+}

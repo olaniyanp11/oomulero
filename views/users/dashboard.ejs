@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Opomulero Dashboard</title>
+  <style>
+    body {
+      font-family: 'Open Sans', sans-serif;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      background-color: #f4f4f4;
+    }
+
+    nav {
+      width: 250px;
+      background-color: #213559;
+      color: white;
+      padding: 20px;
+    }
+
+    nav ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    nav li {
+      margin-bottom: 10px;
+    }
+
+    main {
+      flex: 1;
+      padding: 20px;
+    }
+
+    .grid-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 20px;
+    }
+
+    .grid-box {
+      padding: 20px;
+      background-color: white;
+      border-radius: 20px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+    }
+
+    .branding {
+      font-size: 24px;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+
+    .account-balance {
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+
+    .graph {
+      width: 100%;
+      height: 200px; /* Adjust as needed */
+      background-color: #ccc; /* Placeholder color */
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div class="branding">Opomulero Dashboard</div>
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">Analytics</a></li>
+      <li><a href="#">Transactions</a></li>
+      <li><a href="#">Settings</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <div class="grid-container">
+      <div class="grid-box">
+        <div class="account-balance">Account Balance</div>
+        <div class="graph"></div>
+      </div>
+      <div class="grid-box">
+        <div class="account-balance">Investment Portfolio</div>
+        <div class="graph"></div>
+      </div>
+      <div class="grid-box">
+        <div class="account-balance">Savings Overview</div>
+        <div class="graph"></div>
+      </div>
+      <!-- Additional grid boxes for various purposes -->
+    </div>
+  </main>
+
+</body>
+</html>
